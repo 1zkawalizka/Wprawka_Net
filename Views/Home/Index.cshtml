@@ -1,0 +1,12 @@
+﻿@model List<EventTickets.Models.Event>
+
+<h2>Lista wydarzeń</h2>
+
+@foreach (var ev in Model)
+{
+    <div class="card mb-2 p-3">
+        <h5>@ev.Name</h5>
+        <p>@ev.Place — @ev.Date.ToShortDateString()</p>
+        <span>@ev.Category</span>
+    </div>
+}
